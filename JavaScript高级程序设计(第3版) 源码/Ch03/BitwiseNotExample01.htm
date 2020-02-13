@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bitwise NOT Example 1</title>
+    <script type="text/javascript">
+
+    //自增  ~:执行按位非的结果就是返回数值的反码：相当于操作数的负值减1
+        var num =-18;
+        alert(num.toString(2));    //"-10010"
+        console.log(~Infinity);    //对Infinity应用位操作时，当成0处理
+        console.log(~NaN);         //对NaN应用位操作时，当成0处理
+
+        
+        var num1 = 25;             //binary 00000000000000000000000000011001
+        var num2 = ~num1;          //binary 11111111111111111111111111100110
+        alert(num2);               //-26
+
+
+    </script>
+
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp toString() Example</title>
+    <script type="text/javascript">
+
+    //自增  
+        var pattern = new RegExp("\\[bc\\]at", "gi");
+        console.log(pattern.toString());               // /\[bc\]at/gi
+        console.log(pattern.toLocaleString());         // /\[bc\]at/gi
+        console.log(pattern.valueOf());                // /\[bc\]at/gi 正则表达式本身
+        console.log(pattern.source);                   // \[bc\]at
+
+        var pattern1 = /\[bc\]at/gi;
+        console.log(pattern1.toString());              // /\[bc\]at/gi
+        console.log(pattern1.toLocaleString());        // /\[bc\]at/gi
+        console.log(pattern1.valueOf());               // /\[bc\]at/gi  正则表达式本身
+        console.log(pattern.source);                   // \[bc\]at
+    </script>
+</head>
+<body>
+
+</body>
+</html>

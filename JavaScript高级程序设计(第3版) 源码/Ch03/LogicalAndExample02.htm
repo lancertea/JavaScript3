@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logical AND Example 2</title>
+    <script type="text/javascript">
+    
+        var found = false;
+        var result = (found && someUndeclaredVariable);    //no error
+        alert(result);    //works
+    
+    //自增
+    var a1 ={},
+         a2={
+        value:3
+         },
+         a3;
+    console.log(a1&&a2);         //a2
+    console.log(a1&&NaN);        //NaN
+    console.log(a1&&null);       //null
+    console.log(a1&&a3);         //undefined
+    console.log(false&&NaN);     //false
+    console.log(false&&null);    //false
+    console.log(false&&a3);      //false
+    console.log(NaN&&false);     //NaN
+    console.log(null&&false);    //null
+    console.log(a3&&false);      //undefined
+    
+
+    </script>
+
+</head>
+<body>
+  
+</body>
+</html>

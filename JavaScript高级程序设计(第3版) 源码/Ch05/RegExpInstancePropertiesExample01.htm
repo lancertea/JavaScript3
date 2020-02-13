@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp Instance Properties Example</title>
+    <script type="text/javascript">
+        var pattern1 = /\[bc\]at/i;
+        
+        alert(pattern1.global);     //false
+        alert(pattern1.ignoreCase); //true
+        alert(pattern1.multiline);  //false
+        alert(pattern1.lastIndex);  //0
+        alert(pattern1.source);     //"\[bc\]at"
+
+        var pattern2 = new RegExp("\\[bc\\]at", "i");
+        
+        alert(pattern2.global);     //false
+        alert(pattern2.ignoreCase); //true
+        alert(pattern2.multiline);  //false
+        alert(pattern2.lastIndex);  //0
+        alert(pattern2.source);     //"\[bc\]at"
+
+    //自增
+    //ES5明确规定，使用正则表达式字面量必须像直接调用RegExp构造函数一样，每次都创建新的RegExp实例
+    var re = null,
+        i;
+    for(i=0;i<10;i++)
+    {
+       re=/cat/g;
+       console.log(re.test("catastrophe"));
+
+    }
+    for(i=0;i<10;i++)
+    {
+       re=new RegExp("cat","g");
+       console.log(re.test("catastrophe"));
+
+    }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
