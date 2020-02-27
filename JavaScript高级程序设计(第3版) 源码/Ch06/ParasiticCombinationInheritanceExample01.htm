@@ -48,6 +48,15 @@
         alert(instance2.colors);  //"red,blue,green"
         instance2.sayName();      //"Greg";
         instance2.sayAge();       //27
+
+        //自增 
+        alert(instance1 instanceof Object);  //true
+        alert(instance1 instanceof SuperType); //true
+        alert(instance1 instanceof SubType);//true
+
+        alert(instance1.constructor==Object);//false
+        alert(instance1.constructor==SuperType);//false
+        alert(instance1.constructor==SubType);//true
        
         
     </script>

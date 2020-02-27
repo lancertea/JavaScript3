@@ -33,6 +33,11 @@
         alert(Object.prototype.isPrototypeOf(instance));    //true
         alert(SuperType.prototype.isPrototypeOf(instance)); //true
         alert(SubType.prototype.isPrototypeOf(instance));   //true
+
+        //自增
+        alert(instance.constructor==Object);//false
+        alert(instance.constructor==SuperType);//true
+        alert(instance.constructor==SubType);//false
         
         
     </script>

@@ -8,6 +8,11 @@
             this.colors = ["red", "blue", "green"];
         }
 
+        //自增
+        SuperType.prototype.saycolor = function () {
+            alert(this.colors);
+        };
+
         function SubType(){  
             //inherit from SuperType
             SuperType.call(this);
@@ -19,6 +24,8 @@
         
         var instance2 = new SubType();
         alert(instance2.colors);    //"red,blue,green"
+
+        //instance1.saycolor() 报错  parent原型链上的属性和方法并不会被子类继承
         
         
     </script>
