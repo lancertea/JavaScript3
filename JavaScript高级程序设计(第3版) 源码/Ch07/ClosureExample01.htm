@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Closure Example</title>
-    </head>
-    <body>
-        <script type="text/javascript">
-        
-            function createFunctions(){
-                var result = new Array();
-                
-                for (var i=0; i < 10; i++){
-                    result[i] = function(){
-                        return i;
-                    };
-                }
-                
-                return result;
-            }
-            
-            var funcs = createFunctions();
-            
-            //every function outputs 10
-            for (var i=0; i < funcs.length; i++){
-                document.write(funcs[i]() + "<br />");
+
+<head>
+    <title>Closure Example</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function createFunctions() {
+            var result = new Array();
+
+            for (var i = 0; i < 10; i++) {
+                result[i] = function () {
+                    return i;
+                };
             }
 
-        </script>
-     
-    </body>
+            return result;
+        }
+
+        var funcs = createFunctions();
+
+        //every function outputs 10
+        for (var i = 0; i < funcs.length; i++) {
+            document.write(funcs[i]() + "<br />");
+        }
+
+
+        var name = "The Window";
+        var object = {
+            name: "My Object",
+            getNameFunc: function () {
+                return function () {
+                    return this.name;
+                };
+            }
+        };
+        alert(object.getNameFunc()());
+
+
+        var name = "The Window";
+        var object = {
+            name: "My Object",
+            getNameFunc: function () {
+                var that = this;
+                return function () {
+                    return that.name;
+                };
+            }
+        };
+        alert(object.getNameFunc()());
+    </script>
+
+</body>
+
 </html>
