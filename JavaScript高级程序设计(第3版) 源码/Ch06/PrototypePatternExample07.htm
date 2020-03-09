@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>Prototype Pattern Example</title>
     <script type="text/javascript">
             
@@ -17,11 +18,13 @@
         };
 
         var friend = new Person();
+        console.log(friend.name);//"Nicholas"
         
-        alert(friend instanceof Object);  //true
-        alert(friend instanceof Person);  //true
-        alert(friend.constructor == Person);  //false
-        alert(friend.constructor == Object);  //true
+        
+        console.log(friend instanceof Object);  //true
+        console.log(friend instanceof Person);  //true
+        console.log(friend.constructor === Person);  //false
+        console.log(friend.constructor === Object);  //true
         
     </script>
 </head>

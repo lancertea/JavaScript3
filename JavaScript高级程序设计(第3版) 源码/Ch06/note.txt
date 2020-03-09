@@ -2,6 +2,7 @@ ObjectKeysExample01
 PrototypeChainingExample01
 PrototypalInheritanceExample01
 PrototypePatternExample01
+PrototypePatternExample07
 ConstructorStealingExample01
 CombinationInheritanceExample01
 ParasiticCombinationInheritanceExample01
